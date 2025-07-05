@@ -506,4 +506,9 @@ if __name__ == '__main__':
     
     print(f"Pipeline scheduler started. Next run scheduled for {schedule_time_str} UTC daily.")
     print(f"Available scrapers found: {scraper_manager.get_all_scraper_names()}")
-    app.run(debug=True, use_reloader=False)
+    
+    # --- MODIFICATION FOR NETWORK ACCESS ---
+    # The host='0.0.0.0' argument tells Flask to listen on all public IPs,
+    # making it accessible from other machines on the network.
+    # You will still need to ensure your server's firewall allows connections on the port (default 5000).
+    app.run(host='0.0.0.0', debug=True, use_reloader=False)
