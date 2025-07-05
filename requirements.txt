@@ -10,7 +10,7 @@ langchain-community
 pydantic
 
 python-dotenv
-
+pytz
 Flask
 Flask-Cors
 apscheduler
